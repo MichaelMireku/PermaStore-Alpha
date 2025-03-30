@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  server:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./blockchain.json:/app/blockchain.json
+      - ./peers.txt:/app/peers.txt
+      - ./permastore_it.log:/app/permastore_it.log
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+volumes:
+  uploads:
+  blockchain:
+  peers:
+  logs:
