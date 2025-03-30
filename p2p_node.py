@@ -11,7 +11,7 @@ from network import Network
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='permastore.log'
+    filename='permastore_it.log'
 )
 logger = logging.getLogger("p2p_node")
 
@@ -70,7 +70,7 @@ class P2PNode:
         return None
 
 # Create FastAPI application
-app = FastAPI(title="PermaStore P2P Node", version="1.0.0")
+app = FastAPI(title="PermastoreIt P2P Node", version="1.0.0")
 node = P2PNode()
 
 @app.post("/upload")

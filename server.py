@@ -15,13 +15,13 @@ from p2p_node import P2PNode
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='permastore.log'
+    filename='permastore_it.log'
 )
-logger = logging.getLogger("permastore_server")
+logger = logging.getLogger("permastore_it_server")
 
 # Create FastAPI application
 app = FastAPI(
-    title="PermaStore API",
+    title="PermastoreIt API",
     description="Decentralized file storage using blockchain",
     version="1.0.0"
 )
@@ -78,7 +78,7 @@ class StatusResponse(BaseModel):
 # API routes
 @app.post("/upload", response_model=FileResponse)
 async def upload_file(file: UploadFile = File(...)):
-    """Upload a file to the PermaStore network"""
+    """Upload a file to the PermastoreIt network"""
     try:
         result = await node.store_file(file)
         return {"hash": result["hash"], "message": "File uploaded successfully"}
@@ -88,7 +88,7 @@ async def upload_file(file: UploadFile = File(...)):
 
 @app.get("/download/{file_hash}")
 async def download_file(file_hash: str):
-    """Download a file from the PermaStore network"""
+    """Download a file from the PermastoreIt network"""
     file_path = node.retrieve_file(file_hash)
     if not file_path:
         raise HTTPException(status_code=404, detail="File not found")
@@ -96,20 +96,20 @@ async def download_file(file_hash: str):
 
 @app.post("/peers")
 async def add_peer(peer: PeerModel):
-    """Add a peer to the PermaStore network"""
+    """Add a peer to the PermastoreIt network"""
     if node.network.add_peer(peer.url):
         return {"message": f"Peer added: {peer.url}"}
     raise HTTPException(status_code=400, detail="Failed to add peer")
 
 @app.delete("/peers/{peer_url}")
 async def remove_peer(peer_url: str):
-    """Remove a peer from the PermaStore network"""
+    """Remove a peer from the PermastoreIt network"""
     node.network.remove_peer(peer_url)
     return {"message": f"Peer removed: {peer_url}"}
 
 @app.get("/peers")
 async def get_peers():
-    """Get all peers in the PermaStore network"""
+    """Get all peers in the PermastoreIt network"""
     return {"peers": list(node.network.peers)}
 
 @app.post("/sync")
@@ -143,7 +143,7 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 # Main entry point
 if __name__ == "__main__":
-    logger.info(f"Starting PermaStore server on {config['host']}:{config['port']}")
+    logger.info(f"Starting PermastoreIt server on {config['host']}:{config['port']}")
     uvicorn.run(
         "server:app", 
         host=config["host"], 

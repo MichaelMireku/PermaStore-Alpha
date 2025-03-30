@@ -1,4 +1,4 @@
-# PermaStore (Alpha) Documentation
+# PermastoreIt (Alpha) Documentation
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@
 
 ## Introduction
 
-PermaStore is a decentralized file storage protocol that uses blockchain technology to track file transactions and peer-to-peer networking for file distribution. It provides a reliable way to store and retrieve files across a network of nodes, ensuring data persistence and availability.
+PermastoreIt is a decentralized file storage protocol that uses blockchain technology to track file transactions and peer-to-peer networking for file distribution. It provides a reliable way to store and retrieve files across a network of nodes, ensuring data persistence and availability.
 
 Key features:
 - Content-addressed storage (files are identified by their hash)
@@ -38,7 +38,7 @@ Key features:
 
 ## Architecture Overview
 
-PermaStore follows a modular architecture with four main components:
+PermastoreIt follows a modular architecture with four main components:
 
 1. **Server**: Provides the HTTP API for interacting with the system
 2. **P2P Node**: Orchestrates file storage and blockchain operations
@@ -62,7 +62,7 @@ PermaStore follows a modular architecture with four main components:
 ```
 
 Files flow through the system as follows:
-1. A client uploads a file to a PermaStore node via the HTTP API
+1. A client uploads a file to a PermastoreIt node via the HTTP API
 2. The file is stored locally and its hash is recorded in the blockchain
 3. The file is broadcasted to peer nodes in the network
 4. Files can be retrieved by their hash from any node in the network
@@ -80,8 +80,8 @@ Files flow through the system as follows:
 1. Clone the repository or copy the project files to your server:
 
 ```bash
-git clone https://github.com/yourusername/permastore.git
-cd permastore
+git clone https://github.com/yourusername/permastore_it.git
+cd permastore_it
 ```
 
 2. Install the required Python packages:
@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
 ```bash
 mkdir -p uploads
-touch blockchain.json peers.txt permastore.log
+touch blockchain.json peers.txt permastore_it.log
 ```
 
 4. Start the server:
@@ -112,8 +112,8 @@ The server will be available at http://localhost:5000 (or the port specified in 
 2. Clone the repository or copy the project files:
 
 ```bash
-git clone https://github.com/yourusername/permastore.git
-cd permastore
+git clone https://github.com/yourusername/permastore_it.git
+cd permastore_it
 ```
 
 3. Build and start the Docker container:
@@ -126,7 +126,7 @@ This will build the Docker image and start the container in detached mode. The s
 
 ## Configuration
 
-PermaStore is configured via the `config.json` file. Here are the available options:
+PermastoreIt is configured via the `config.json` file. Here are the available options:
 
 ```json
 {
@@ -154,7 +154,7 @@ PermaStore is configured via the `config.json` file. Here are the available opti
   },
   "logging": {
     "level": "INFO",               // Logging level
-    "file": "permastore.log",      // Log file
+    "file": "permastore_it.log",   // Log file
     "max_size": 10485760,          // Maximum log file size (10MB)
     "backup_count": 5              // Number of log file backups
   }
@@ -163,7 +163,7 @@ PermaStore is configured via the `config.json` file. Here are the available opti
 
 ## API Reference
 
-PermaStore provides a RESTful API for interacting with the system. All API endpoints return JSON responses.
+PermastoreIt provides a RESTful API for interacting with the system. All API endpoints return JSON responses.
 
 ### File Operations
 
@@ -173,7 +173,7 @@ PermaStore provides a RESTful API for interacting with the system. All API endpo
 POST /upload
 ```
 
-Upload a file to the PermaStore network.
+Upload a file to the PermastoreIt network.
 
 **Request:**
 - Method: POST
@@ -200,7 +200,7 @@ Upload a file to the PermaStore network.
 GET /download/{file_hash}
 ```
 
-Download a file from the PermaStore network by its hash.
+Download a file from the PermastoreIt network by its hash.
 
 **Request:**
 - Method: GET
@@ -222,7 +222,7 @@ Download a file from the PermaStore network by its hash.
 POST /peers
 ```
 
-Add a peer to the PermaStore network.
+Add a peer to the PermastoreIt network.
 
 **Request:**
 - Method: POST
@@ -252,7 +252,7 @@ Add a peer to the PermaStore network.
 DELETE /peers/{peer_url}
 ```
 
-Remove a peer from the PermaStore network.
+Remove a peer from the PermastoreIt network.
 
 **Request:**
 - Method: DELETE
@@ -275,7 +275,7 @@ Remove a peer from the PermaStore network.
 GET /peers
 ```
 
-Get a list of all peers in the PermaStore network.
+Get a list of all peers in the PermastoreIt network.
 
 **Request:**
 - Method: GET
@@ -401,7 +401,7 @@ Check if the node is healthy.
 
 ### Server
 
-The server component (implemented in `server.py`) provides the HTTP API for interacting with the PermaStore network. It handles incoming requests, routes them to the appropriate components, and returns responses to clients.
+The server component (implemented in `server.py`) provides the HTTP API for interacting with the PermastoreIt network. It handles incoming requests, routes them to the appropriate components, and returns responses to clients.
 
 Key responsibilities:
 - Expose RESTful API endpoints
@@ -444,7 +444,7 @@ Key responsibilities:
 
 ## Storage Structure
 
-PermaStore uses a content-addressed storage system, where files are identified by their hash. The storage directory structure is as follows:
+PermastoreIt uses a content-addressed storage system, where files are identified by their hash. The storage directory structure is as follows:
 
 ```
 uploads/
@@ -459,7 +459,7 @@ The blockchain data is stored in the `blockchain.json` file, which contains the 
 
 ## Security Considerations
 
-PermaStore includes several security features to ensure the integrity and availability of stored files:
+PermastoreIt includes several security features to ensure the integrity and availability of stored files:
 
 1. **Content Addressing**: Files are identified by their hash, making it easy to verify file integrity
 2. **Hash Verification**: When downloading files from peers, the hash is verified to ensure the file hasn't been tampered with
@@ -477,11 +477,11 @@ For production deployments, consider the following additional security measures:
 
 ## Monitoring and Maintenance
 
-PermaStore includes logging and monitoring features to help you keep track of system health and performance.
+PermastoreIt includes logging and monitoring features to help you keep track of system health and performance.
 
 ### Logging
 
-Logs are written to the `permastore.log` file by default. The logging level and other options can be configured in the `config.json` file.
+Logs are written to the `permastore_it.log` file by default. The logging level and other options can be configured in the `config.json` file.
 
 Example log output:
 ```
@@ -498,7 +498,7 @@ You can use a monitoring tool like Prometheus or Nagios to periodically check th
 
 ### Backup and Recovery
 
-To backup PermaStore data, you should regularly backup the following files:
+To backup PermastoreIt data, you should regularly backup the following files:
 
 1. `blockchain.json`: Contains the blockchain data
 2. `peers.txt`: Contains the list of known peers
@@ -533,7 +533,7 @@ For Docker deployments, these files are mounted as volumes, so they persist even
 ### Project Structure
 
 ```
-permastore/
+permastore_it/
 │
 ├── server.py                # Main entry point and API routes
 ├── p2p_node.py              # P2P node implementation
@@ -547,7 +547,7 @@ permastore/
 ├── uploads/                 # Directory for stored files
 ├── blockchain.json          # Persistent blockchain storage
 ├── peers.txt                # List of known peers
-└── permastore.log           # Application logs
+└── permastore_it.log           # Application logs
 ```
 
 ### Adding New Features
