@@ -1,4 +1,4 @@
-# PermaStore Alpha Documentation
+# PermaStore (Alpha) Documentation
 
 ## Table of Contents
 
