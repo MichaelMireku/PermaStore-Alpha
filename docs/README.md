@@ -80,8 +80,8 @@ Files flow through the system as follows:
 1. Clone the repository or copy the project files to your server:
 
 ```bash
-git clone https://github.com/PermstoreIT/PermstoreIt-Alpha.git
-cd PERMASTOREIT-ALPHA
+git clone https://github.com/PermstoreIT/PermstoreIt-Demo.git
+cd PERMASTOREIT-DEMO
 ```
 
 2. Install the required Python packages:
@@ -112,8 +112,8 @@ The server will be available at http://localhost:5000 (or the port specified in 
 2. Clone the repository or copy the project files:
 
 ```bash
-git clone https://github.com/PermstoreIT/PermstoreIt-Alpha.git
-cd PERMASTOREIT-ALPHA
+git clone https://github.com/PermstoreIT/PermstoreIt-Demo.git
+cd PERMASTOREIT-DEMO
 ```
 
 3. Build and start the Docker container:
@@ -533,7 +533,7 @@ For Docker deployments, these files are mounted as volumes, so they persist even
 ### Project Structure
 
 ```
-PERMASTOREIT-ALPHA/
+PERMASTOREIT-DEMO/
 │
 ├── server.py                # Main entry point and API routes
 ├── p2p_node.py              # P2P node implementation
