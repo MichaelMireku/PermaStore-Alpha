@@ -1,4 +1,4 @@
-# PermastoreIt (Alpha) Documentation
+# PermastoreIt Demo Documentation
 
 ## Table of Contents
 
