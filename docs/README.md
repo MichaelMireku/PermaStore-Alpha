@@ -123,12 +123,12 @@ PermastoreIt is configured via the `config.json` file. Here are the available op
 
 ```
 {
-  "upload_dir": "uploads",         // Directory where files are stored
-  "max_file_size": 104857600,      // Maximum file size in bytes (100MB)
-  "host": "0.0.0.0",               // Host to bind the server to
-  "port": 5000,                    // Port to listen on
-  "debug": false,                  // Enable debug mode
-  "allowed_file_types": [          // Allowed MIME types for file uploads
+  "upload_dir": "uploads",         
+  "max_file_size": 104857600,      
+  "host": "0.0.0.0",               
+  "port": 5000,                   
+  "debug": false,                  
+  "allowed_file_types": [          
     "application/pdf",
     "image/jpeg",
     "image/png",
@@ -137,19 +137,19 @@ PermastoreIt is configured via the `config.json` file. Here are the available op
     "application/octet-stream"
   ],
   "blockchain": {
-    "storage_file": "blockchain.json",  // File to store blockchain data
-    "min_transactions_per_block": 1     // Minimum transactions per block
+    "storage_file": "blockchain.json",  
+    "min_transactions_per_block": 1     
   },
   "network": {
-    "retry_limit": 3,              // Number of retries for network operations
-    "request_timeout": 30,         // Timeout for network requests (seconds)
-    "sync_interval": 3600          // Interval for file synchronization (seconds)
+    "retry_limit": 3,              
+    "request_timeout": 30,         
+    "sync_interval": 3600          
   },
   "logging": {
-    "level": "INFO",               // Logging level
-    "file": "permastore_it.log",   // Log file
-    "max_size": 10485760,          // Maximum log file size (10MB)
-    "backup_count": 5              // Number of log file backups
+    "level": "INFO",               
+    "file": "permastore_it.log",   
+    "max_size": 10485760,          
+    "backup_count": 5              
   }
 }
 ```
