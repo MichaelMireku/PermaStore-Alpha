@@ -1,0 +1,6 @@
+perma/
+__pycache__/
+peers.txt
+blockchain.json
+permastore_it.log
+upload/
