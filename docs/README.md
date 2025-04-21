@@ -90,14 +90,7 @@ cd PERMASTOREIT-DEMO
 pip install -r requirements.txt
 ```
 
-3. Create necessary directories and files:
-
-```bash
-mkdir -p uploads
-touch blockchain.json peers.txt permastore_it.log
-```
-
-4. Start the server:
+3. Start the server:
 
 ```bash
 python server.py
