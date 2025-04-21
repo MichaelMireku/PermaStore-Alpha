@@ -7,3 +7,10 @@
 2025-03-30 14:44:52,977 - permastore_it_server - INFO - Starting PermastoreIt server on 0.0.0.0:5000
 2025-03-30 14:44:53,158 - blockchain - INFO - Loaded blockchain with 1 blocks
 2025-03-30 14:44:53,159 - network - INFO - Loaded 0 peers
+2025-04-21 08:57:13,137 - blockchain - INFO - Loaded blockchain with 1 blocks
+2025-04-21 08:57:13,139 - network - INFO - Loaded 0 peers
+2025-04-21 08:57:13,152 - blockchain - INFO - Loaded blockchain with 1 blocks
+2025-04-21 08:57:13,152 - network - INFO - Loaded 0 peers
+2025-04-21 08:57:13,161 - permastore_it_server - INFO - Starting PermastoreIt server on 0.0.0.0:5000
+2025-04-21 08:57:13,343 - blockchain - INFO - Loaded blockchain with 1 blocks
+2025-04-21 08:57:13,344 - network - INFO - Loaded 0 peers
