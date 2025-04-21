@@ -90,14 +90,7 @@ cd PERMASTOREIT-DEMO
 pip install -r requirements.txt
 ```
 
-3. Create necessary directories and files:
-
-```bash
-mkdir -p uploads
-touch blockchain.json peers.txt permastore_it.log
-```
-
-4. Start the server:
+3. Start the server:
 
 ```bash
 python server.py
@@ -128,7 +121,7 @@ This will build the Docker image and start the container in detached mode. The s
 
 PermastoreIt is configured via the `config.json` file. Here are the available options:
 
-```json
+```
 {
   "upload_dir": "uploads",         // Directory where files are stored
   "max_file_size": 104857600,      // Maximum file size in bytes (100MB)
